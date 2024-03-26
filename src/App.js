@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import DaWebChat from './DaWebChat';
 
+/**
+ * Renders the main application component.
+ *
+ * @return {JSX.Element} The main application component.
+ */
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DaWebChat
+        greetings="Hello"
+        message="Welcome to our website"
+        apiKey="your-api-key"
+        primaryColor="#000000"
+        textColor="#ffffff"
+        logo="logo-url"
+      />
     </div>
   );
 }
 
 export default App;
+``
