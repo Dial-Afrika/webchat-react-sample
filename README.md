@@ -3,7 +3,7 @@
 This project demonstrates how to integrate the DaWebChat widget into a React application.
 
 ## Installation
-1. Clone this repository: git clone https://github.com/webchat-react-sample.git
+1. Clone this repository: git clone https://github.com/Dial-Afrika/webchat-react-sample
 2. Install dependencies: `npm install`
 3. Start the app: `npm start`
 
