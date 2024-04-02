@@ -82,7 +82,7 @@ interface DaWebChatProps extends React.HTMLAttributes<HTMLDivElement> {
   logo: string;
 }
 
-const WebChatComponent: React.FC<DaWebChatProps> = ({
+const DaWebChat: React.FC<DaWebChatProps> = ({
   primaryColor,
   textColor,
   apiKey,
@@ -103,7 +103,7 @@ const WebChatComponent: React.FC<DaWebChatProps> = ({
   );
 };
 
-export default WebChatComponent;
+export default DaWebChat;
 ```
 
 > Replace apiKey, primaryColor, textColor, and logo with your actual values. The greetings and message can be configured on BongaCX dashboard.
