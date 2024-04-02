@@ -33,6 +33,8 @@ The `DaWebChat` component is responsible for loading the DaWebChat widget script
 
 Here's how you can use the `DaWebChat` component:
 
+### For Javascript
+
 ```jsx
 import DaWebChat from './DaWebChat';
 
@@ -53,6 +55,55 @@ function App() {
 }
 
 export default App;
+```
+### For Typescript
+
+```tsx
+import React from 'react';
+import Image from 'next/image';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'da-web-chat': {
+        children?: React.ReactNode;
+        primaryColor?: string;
+        textColor?: string;
+        apiKey?: string;
+      };
+    }
+  }
+}
+
+interface DaWebChatProps extends React.HTMLAttributes<HTMLDivElement> {
+  primaryColor: string;
+  textColor: string;
+  apiKey: string;
+  logo: string;
+}
+
+const WebChatComponent: React.FC<DaWebChatProps> = ({
+  primaryColor,
+  textColor,
+  apiKey,
+  logo,
+}) => {
+  return (
+    <div>
+      <da-web-chat
+        primaryColor={primaryColor}
+        textColor={textColor}
+        apiKey={apiKey}
+      >
+        <Image width={50} height={50} slot="logo" src="/next.svg" alt="logo" />
+      </da-web-chat>
+
+      <script type="module" crossOrigin="anonymous" src="https://cdn.jsdelivr.net/npm/da-web-chat@2.1.5/dist/assets/index.js" defer></script>
+    </div>
+  );
+};
+
+export default WebChatComponent;
 ```
 
 > Replace apiKey, primaryColor, textColor, and logo with your actual values. The greetings and message can be configured on BongaCX dashboard.
